@@ -1,9 +1,9 @@
-#Readme
+# Readme
 
 Boris bike challenge.
 
 
 
-###Build Status
+### Build Status
 
 To be created
