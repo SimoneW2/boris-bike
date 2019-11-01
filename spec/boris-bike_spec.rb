@@ -1,6 +1,6 @@
 require './lib/boris-bike.rb'
 
-describe 'DockingStation' do
+describe DockingStation do
   it 'Checks DockingStation exists' do
     dockingstation = DockingStation.new
     expect(dockingstation).to be_instance_of(DockingStation)
@@ -26,14 +26,15 @@ describe 'DockingStation' do
     expect(dockingstation).to respond_to(:dock).with(1).argument
     end
 
-  it 'expected to respond to bike' do
+   it 'expected to respond to bike' do
     dockingstation = DockingStation.new
-    expect(dockingstation).to respond_to(:bike)
-  end
+     expect(dockingstation).to respond_to(:bike)
+   end
 
-  it 'returns docked bikes' do
-    bike = Bike.new
-    subject.dock(bike)
-    expect(subject.bike).to eq bike
-  end
+   it 'returns bikes' do
+   bike = Bike.new
+   subject.dock(bike)
+  expect(subject.bike).to eq bike
 end
+
+  end
