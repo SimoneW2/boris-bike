@@ -23,6 +23,19 @@ describe 'DockingStation' do
 
   it 'retrieves bike' do
     dockingstation = DockingStation.new
-    expect(dockingstation).to respond_to(:dock)
+    expect(dockingstation).to respond_to(:dock).with(1).argument
     end
+
+  it 'expected to respond to bike' do
+    dockingstation = DockingStation.new
+    expect(dockingstation).to respond_to(:bike)
+
+  it 'returns docked bikes' do
+    bike = Bike.new
+    subject.dock(bike)
+    expect(subject.bike).to eq bike
   end
+
+  end
+  end
+#  end
